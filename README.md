@@ -1,16 +1,40 @@
-# next-template
+# next-template-cli
 
-Starter structure:
-- `app/(public)` and `app/(private)` route groups
-- `middleware.ts` guards private routes
-- `services/` split: `api/`, `mutation/`, `query/`, `middleware/`
-- `zustand` auth store + cookie token
-- `@tanstack/react-query` setup in `providers/`
+Creates a reusable Next.js App Router starter with:
+- `app/(public)` + `app/(private)` route groups
+- `middleware.ts` auth guard
+- `@tanstack/react-query`, `zustand`, `react-hook-form` + `yup`
+- Axios client with interceptors
+- `services/` split into `api/`, `mutation/`, `query/`, `middleware/`
 
-## Env
+## Usage
 
-Create `.env.local`:
+Via `npx` (once this repo is public):
 
-```bash
-NEXT_PUBLIC_API_URL=http://localhost:8000
+```sh
+npx github:SameerAther/next-template my-new-app
 ```
+
+From this repo root:
+
+```sh
+node bin/create-next-template.js my-new-app
+```
+
+Dry run:
+
+```sh
+node bin/create-next-template.js my-new-app --dry-run
+```
+
+Then:
+
+```sh
+cd my-new-app
+npm install
+npm run dev
+```
+
+## Templates
+
+- `next-basic-auth` (default): minimal auth skeleton (login + dashboard)

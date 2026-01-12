@@ -3,7 +3,7 @@ import AppProviders from "@/providers/app-providers";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "next-template",
+  title: "__APP_NAME__",
 };
 
 export default function RootLayout({
